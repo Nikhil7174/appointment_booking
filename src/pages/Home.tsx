@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import profile_doc from '../img/profile_doctor.png'
 import { FaClinicMedical } from "react-icons/fa";

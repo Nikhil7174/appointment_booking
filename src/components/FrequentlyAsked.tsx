@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 import { FaCircleArrowDown } from "react-icons/fa6";
 
 const FrequentlyAsked = () => {
@@ -10,6 +10,7 @@ const FrequentlyAsked = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const handleToggle = (index: number) => {
+    //@ts-ignore
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaChevronRight } from 'react-icons/fa';
 import { FaChevronLeft } from "react-icons/fa6";
 
