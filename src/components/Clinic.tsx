@@ -2,7 +2,7 @@ import DateSelector from './DateSelector'
 
 const Clinic = () => {
   return (
-    <div>
+    <div className='bg-white pb-40'>
         <div className='font-bold text-2xl px-10'>
             Clinic Name
         </div>

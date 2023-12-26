@@ -8,12 +8,14 @@ const DateSelector = () => {
 
     const [continueButton, setContinueButton] = useState("inactive")
     const [selectedSlot, setSelectedSlot] = useState(null);
-    const handleSlotClick = (item:any) => {
+    const handleSlotClick = (item: any) => {
+        // event.preventDefault();
         setSelectedSlot(item);
         setContinueButton("active");
-      };
+    };
+    console.log(continueButton)
     return (
-        <div className='relative'>
+        <div className='bg-white relative'>
             <div className='flex flex-row justify-between mt-12 items-center px-10'>
                 <FaChevronLeft />
                 <div>
@@ -57,18 +59,20 @@ const DateSelector = () => {
             </div> */}
                 <div className='flex flex-row px-10 mt-4 flex-wrap items-center justify-start '>
                     {arr.map((item) => (
-                        <div className={`bg-white border-[1px] border-gray-300 cursor-pointer rounded-md px-44 py-2 mx-4 my-2 ml-5 ${
-                            selectedSlot === item ? 'bg-orange-600 text-white' : ''
-                        }`} onClick={()=>handleSlotClick(item)}
+                        <div className={`bg-white border-[1px] border-gray-300 cursor-pointer rounded-md px-44 py-2 mx-4 my-2 ml-5 ${selectedSlot === item ? 'bg-[#0bde24] text-white' : ''
+                            }`} onClick={() => handleSlotClick(item)}
                         >
                             {item}
                         </div>
                     ))}
                 </div>
+                <div className="absolute right-0 m-5">
+                <a href="https://remedoapp.com/rweb/doctors/drmanikdalvi/992acd41-dc20-4334-b7ce-9da565389754" target='_blank'>
+                    <button className={`bg-blue-400 ${continueButton === 'active' && 'bg-blue-600 text-white'} text-white px-4 py-2 rounded `} disabled={continueButton === "inactive"} >Your Button</button>
+                    </a>
+                </div>
             </div>
-            <div className="absolute right-0 m-4">
-                <button className={`bg-gray-400 ${continueButton === 'active' && 'bg-blue-600 text-white'} text-white px-4 py-2 rounded `} disabled={!continueButton} >Your Button</button>
-            </div>
+
         </div>
     )
 }

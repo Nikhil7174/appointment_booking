@@ -16,7 +16,7 @@ const FrequentlyAsked = () => {
 
 
   return (
-    <div className='px-10 mt-36 bg-green-500 p-16  xs:w-full'>
+    <div className='px-10  bg-green-500 p-16  xs:w-full'>
         <div className='font-bold text-2xl flex items-center justify-center'>
             Frequently asked questions
         </div>

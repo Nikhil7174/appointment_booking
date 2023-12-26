@@ -10,13 +10,13 @@ import FrequentlyAsked from '../components/FrequentlyAsked';
 
 const Home = () => {
 
-  const [iconColor1, setIconColor1] = useState('black');
+  const [iconColor1, setIconColor1] = useState('white');
   const [iconColor2, setIconColor2] = useState('black');
   const [iconColor3, setIconColor3] = useState('black');
-  const [bg1, setBgColor1] = useState('white');
+  const [bg1, setBgColor1] = useState('green-600');
   const [bg2, setBgColor2] = useState('white');
   const [bg3, setBgColor3] = useState('white');
-  const [text1, setTextColor1] = useState('black');
+  const [text1, setTextColor1] = useState('white');
   const [text2, setTextColor2] = useState('black');
   const [text3, setTextColor3] = useState('black');
   const [compVisible, setCompVisible] = useState('clinic');
@@ -67,7 +67,7 @@ const Home = () => {
     <div className='mt-0 p-0'>
       <Navbar />
 
-      <div style={{height:"fit-content"}} className='bg-gray-300  flex z-10'>
+      <div className='bg-gray-300 lg:h-[111rem]  flex z-10'>
         <div className='bg-white h-screen flex w-full max-w-[1024px] lg:max-w-[1380px] mx-auto'>
           <div className='w-full'>
             <div className='flex flex-row ml-10 mt-7 lg:mt-12'>
@@ -78,7 +78,9 @@ const Home = () => {
                 <div className='font-bold justify-start flex text-lg'><h2>Dr. Manik Dalvi</h2></div>
                 <div className='text-gray-700 text-sm'>Obstetrics & Gynecology</div>
                 <div>
+                  <a href='https://drmanikdalvi.getmy.clinic/' target='_blank'>
                   <button className='bg-white border-[1px] px-2 justify-start flex border-blue-500 text-blue-500 rounded-md py-1 mt-2'>View Profile</button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -116,7 +118,7 @@ const Home = () => {
 
             </div>
             <div>
-              <div className=' my-10'>
+              <div className=' mt-10'>
                 {compVisible === 'clinic' ? <Clinic /> : null}
                 {compVisible === 'audio' ? <Audio /> : null}
                 {compVisible === 'video' ? <Video /> : null}
