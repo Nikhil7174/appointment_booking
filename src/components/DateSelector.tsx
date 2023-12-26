@@ -59,7 +59,7 @@ const DateSelector = () => {
             </div> */}
                 <div className='flex flex-row px-10 mt-4 flex-wrap items-center justify-start '>
                     {arr.map((item) => (
-                        <div className={`bg-white border-[1px] border-gray-300 cursor-pointer rounded-md px-44 py-2 mx-4 my-2 ml-5 ${selectedSlot === item ? 'bg-[#0bde24] text-white' : ''
+                        <div className={`bg-white border-[1px] border-gray-300 cursor-pointer rounded-md px-44 py-2 mx-4 my-2 ml-5 ${selectedSlot === item ? 'bg-[#0bde24] text-black border-green-600' : ''
                             }`} onClick={() => handleSlotClick(item)}
                         >
                             {item}
